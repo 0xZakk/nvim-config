@@ -37,10 +37,6 @@ Plug 'tpope/vim-surround'
 " https://github.com/itchyny/lightline.vim#introduction
 Plug 'itchyny/lightline.vim'
 
-" Conquer of Completion
-" https://github.com/neoclide/coc.nvim
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " Clever F
 " https://github.com/rhysd/clever-f.vim
 Plug 'rhysd/clever-f.vim'
