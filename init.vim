@@ -8,6 +8,10 @@ call plug#begin('~/.config/nvim/plugged')
 " https://github.com/tpope/vim-sensible
 Plug 'tpope/vim-sensible'
 
+" FZF
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 " Vim Polyglot
 " https://github.com/sheerun/vim-polyglot
 Plug 'sheerun/vim-polyglot'
@@ -68,13 +72,13 @@ Plug 'kien/ctrlp.vim'
 " https://github.com/jiangmiao/auto-pairs
 Plug 'jiangmiao/auto-pairs'
 
-" Autoformat
-" https://github.com/vim-autoformat/vim-autoformat
-Plug 'Chiel92/vim-autoformat'
-
 " Emmet
 " https://github.com/mattn/emmet-vim
 Plug 'mattn/emmet-vim'
+
+"
+" LANGUAGE SPECIFIC
+"
 
 " Vim JavaScript
 " https://github.com/pangloss/vim-javascript
@@ -86,7 +90,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " Prettier
 " https://github.com/prettier/vim-prettier
-"Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'css', 'scss', 'json', 'typescript', 'html', 'markdown', 'solidity', 'graphql'] }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " Vim GraphQL
@@ -105,17 +108,17 @@ Plug 'vyperlang/vim-vyper'
 " https://github.com/pantharshit00/vim-prisma
 Plug 'pantharshit00/vim-prisma'
 
-" Vim Wiki
+"
+" WRITING
+" 
+
+ Vim Wiki
 " https://github.com/vimwiki/vimwiki
 Plug 'vimwiki/vimwiki'
 
 " Goyo
 " https://github.com/junegunn/goyo.vim
 Plug 'junegunn/goyo.vim'
-
-" FZF
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 
 " Vim Zettel
 " https://github.com/michal-h21/vim-zettel
