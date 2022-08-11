@@ -4,6 +4,10 @@ syntax on
 
 call plug#begin('~/.config/nvim/plugged')
 
+"
+" BASIC CONFIG
+"
+
 " Vim Sensible
 " https://github.com/tpope/vim-sensible
 Plug 'tpope/vim-sensible'
@@ -11,10 +15,6 @@ Plug 'tpope/vim-sensible'
 " FZF
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-
-" Vim Polyglot
-" https://github.com/sheerun/vim-polyglot
-Plug 'sheerun/vim-polyglot'
 
 " Rooter
 " https://github.com/airblade/vim-rooter
@@ -26,7 +26,8 @@ Plug 'scrooloose/nerdtree'
 
 " Nord
 " https://github.com/arcticicestudio/nord-vim
-Plug 'arcticicestudio/nord-vim'
+Plug 'shaunsingh/nord.nvim'
+
 
 " Surround
 " https://github.com/tpope/vim-surround
@@ -40,13 +41,17 @@ Plug 'itchyny/lightline.vim'
 " https://github.com/neoclide/coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Clever F
+" https://github.com/rhysd/clever-f.vim
+Plug 'rhysd/clever-f.vim'
+
+" Fugitive (Git integration)
+" https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
+
 " Ale
 " https://github.com/dense-analysis/ale
 Plug 'w0rp/ale'
-
-" UltiSnips
-" https://github.com/SirVer/ultisnips
-"Plug 'SirVer/ultisnips'
 
 " Vim Snippets
 " https://github.com/honza/vim-snippets
@@ -55,14 +60,6 @@ Plug 'honza/vim-snippets'
 " NerdCommenter
 " https://github.com/preservim/nerdcommenter
 Plug 'scrooloose/nerdcommenter'
-
-" Clever F
-" https://github.com/rhysd/clever-f.vim
-Plug 'rhysd/clever-f.vim'
-
-" Fugitive (Git integration)
-" https://github.com/tpope/vim-fugitive
-Plug 'tpope/vim-fugitive'
 
 " Ctrl P
 " https://github.com/kien/ctrlp.vim
@@ -75,6 +72,10 @@ Plug 'jiangmiao/auto-pairs'
 " Emmet
 " https://github.com/mattn/emmet-vim
 Plug 'mattn/emmet-vim'
+
+" Vim Polyglot
+" https://github.com/sheerun/vim-polyglot
+Plug 'sheerun/vim-polyglot'
 
 "
 " LANGUAGE SPECIFIC
@@ -112,7 +113,7 @@ Plug 'pantharshit00/vim-prisma'
 " WRITING
 " 
 
- Vim Wiki
+" Vim Wiki
 " https://github.com/vimwiki/vimwiki
 Plug 'vimwiki/vimwiki'
 
