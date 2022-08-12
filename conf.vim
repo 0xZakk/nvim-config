@@ -1,3 +1,7 @@
+set nocompatible  " Must come first because it changes other options.
+filetype plugin on
+syntax on
+
 " Basic
 set encoding=utf-8                " Sets the default encoding
 set showcmd                       " Display incomplete commands.
