@@ -136,11 +136,6 @@ packer.startup(function(use)
   use 'maxmellon/vim-jsx-pretty'
 
   -- Prettier
-  -- https://github.com/prettier/vim-prettier
-  --use {
-  --'prettier/vim-prettier',
-  --run = 'yarn install --frozen-lockfile --production'
-  --}
   use {
     'MunifTanjim/prettier.nvim', -- Prettier plugin for Neovim's built-in LSP client
     requires = { {
