@@ -4,7 +4,6 @@ if (not status) then
   return
 end
 
-vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
