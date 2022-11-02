@@ -1,0 +1,14 @@
+{
+  "Block": {
+    "prefix": "block",
+    "body": [
+      "{% block ${1:content} %}",
+      "\t$2",
+      "{% endblock ${1:content} %}"
+    ]
+  },
+  "Extends": {
+    "prefix": "extend",
+    "body": "{% extends ${1: \"base.html\"} %}"
+  }
+}
