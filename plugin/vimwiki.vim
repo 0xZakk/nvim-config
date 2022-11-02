@@ -1,5 +1,6 @@
-let g:vimwiki_list = [{'path': '~/slipbox/',
+let g:vimwiki_list = [{'path': '~/garden/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
+autocmd FileType vimwiki set ft=markdown
   "\ 'auto_export': 1,
   "\ 'automatic_nested_syntaxes':1,
   "\ 'path_html': '~/slipbox/_site',

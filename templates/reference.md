@@ -1,4 +1,8 @@
-# {title}
+---
+title: 
+type: reference
+published: true
+---
 
 ## Summary
 

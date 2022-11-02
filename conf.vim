@@ -59,3 +59,6 @@ colorscheme nord
 " Folding
 set foldmethod=indent
 set foldlevel=1
+
+" FZF
+set rtp+=/opt/homebrew/opt/fzf

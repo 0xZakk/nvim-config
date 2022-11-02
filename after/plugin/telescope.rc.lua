@@ -51,6 +51,14 @@ vim.keymap.set('n', '<Leader>ff',
       hidden = true
     })
   end)
+vim.keymap.set(
+  'n', '<CR>p',
+  function()
+    builtin.find_files({
+      no_ignore = false,
+      hidden = true
+    })
+  end)
 vim.keymap.set('n', '<Leader>fg',
   function()
     builtin.live_grep({

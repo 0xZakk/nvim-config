@@ -1,4 +1,8 @@
-# {title}
+---
+title: 
+type: note
+published: true
+---
 
 %%Content:
 

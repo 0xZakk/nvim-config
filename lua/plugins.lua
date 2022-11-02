@@ -1,4 +1,5 @@
 local status, packer = pcall(require, "packer")
+
 if (not status) then
   print("Packer is not installed")
   return
@@ -33,6 +34,10 @@ packer.startup(function(use)
   -- https://github.com/tpope/vim-surround
   use 'tpope/vim-surround'
 
+  -- Repeat
+  -- https://github.com/tpope/vim-repeat
+  use 'tpope/vim-repeat'
+
   -- Clever F
   -- https://github.com/rhysd/clever-f.vim
   use 'rhysd/clever-f.vim'
@@ -49,24 +54,24 @@ packer.startup(function(use)
   -- https://github.com/preservim/nerdcommenter
   use 'scrooloose/nerdcommenter'
 
-  -- Ctrl P
-  -- https://github.com/kien/ctrlp.vim
-  use 'kien/ctrlp.vim'
-
   -- Autopairs
   -- https://github.com/jiangmiao/auto-pairs
   --use 'jiangmiao/auto-pairs'
-
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+
+  -- Eunuch
+  -- https://github.com/tpope/vim-eunuch
+  use 'tpope/vim-eunuch'
 
   --
   -- AESTHETIC
   --
 
   -- Nord
-  -- https://github.com/arcticicestudio/nord-vim
-  use 'shaunsingh/nord.nvim'
+  --https://github.com/arcticicestudio/nord-vim
+  use 'arcticicestudio/nord-vim'
+  -- use 'shaunsingh/nord.nvim'
 
   -- Lualine
   -- https://github.com/nvim-lualine/lualine.nvim
@@ -83,11 +88,13 @@ packer.startup(function(use)
   -- LSP / COMPLETION / SNIPPETS
   --
 
+  use 'neovim/nvim-lspconfig' -- LSP
+  use 'hrsh7th/nvim-cmp' -- Completion
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
-  use 'neovim/nvim-lspconfig' -- LSP
+  use 'hrsh7th/cmp-cmdline'
+
 
   --use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'williamboman/mason.nvim'
@@ -103,8 +110,18 @@ packer.startup(function(use)
   }
 
   --
+  -- Copiilot
+  --
+  use 'github/copilot.vim'
+
+  --
   -- TELESCOPE
   --
+  use 'BurntSushi/ripgrep'
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
+  }
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {
@@ -112,7 +129,6 @@ packer.startup(function(use)
     } }
   }
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'BurntSushi/ripgrep'
 
   --
   -- LANGUAGE SPECIFIC
@@ -172,6 +188,6 @@ packer.startup(function(use)
 
   -- Vim Zettel
   -- https://github.com/michal-h21/vim-zettel
-  use 'michal-h21/vim-zettel'
+  --use 'michal-h21/vim-zettel'
 
 end)

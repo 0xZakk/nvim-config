@@ -12,7 +12,11 @@ prettier.setup {
     "json",
     "yaml",
     "markdown",
+    "solidity",
   },
   bracket_spacing = true,
-  trailing_comma = 'all'
+  trailing_comma = 'all',
+  tab_width = 4,
+  semi = true,
+  use_tabs = false,
 }
