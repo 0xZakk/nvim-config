@@ -186,8 +186,4 @@ packer.startup(function(use)
   -- https://github.com/junegunn/goyo.vim
   use 'junegunn/goyo.vim'
 
-  -- Vim Zettel
-  -- https://github.com/michal-h21/vim-zettel
-  --use 'michal-h21/vim-zettel'
-
 end)
