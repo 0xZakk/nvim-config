@@ -1,3 +1,4 @@
+" TODO: move this file over to lua
 " Mappings
 " Vim mappings
 inoremap jk <esc>
@@ -35,7 +36,6 @@ nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gs :Git<CR>
 nnoremap <leader>gl :Git log<cr>
 nnoremap <leader>gd :Git diff<cr>
-nnoremap <leader>kb :NERDTreeToggle<CR>
 "
 " typing $e in the command line expands to `:e ` + the current path, making
 " https://github.com/statico/dotfiles/blob/master/.vim/vimrc#L142-L145

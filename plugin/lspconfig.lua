@@ -1,9 +1,6 @@
---vim.lsp.set_log_level("debug")
-
-local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
-
+local nvim_lsp = require("lspconfig")
 local protocol = require('vim.lsp.protocol')
+local wk = require('which-key')
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -19,7 +16,7 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', { noremap = true, silent = true })
   --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -125,5 +122,12 @@ vim.diagnostic.config({
   update_in_insert = true,
   float = {
     source = "always", -- Or "if_many"
+  },
+})
+
+wk.register({
+  g = {
+    D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
+    i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
   },
 })

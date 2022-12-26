@@ -6,9 +6,8 @@ if vim.fn.isdirectory(install_path) == 0 then
     vim.cmd [[packadd packer.nvim]]
 end
 
--- load lua configs (these can overwrite the old config)
-require('plugins')
-
 -- load OG conf from vim file
 vim.cmd('source ~/.config/nvim/conf.vim')
 
+-- load lua configs (these can overwrite the old config)
+require('plugins')
