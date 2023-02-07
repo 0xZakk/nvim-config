@@ -8,6 +8,9 @@ end
 
 -- load OG conf from vim file
 vim.cmd('source ~/.config/nvim/conf.vim')
+vim.cmd('source ~/.config/nvim/plugin/nord.vim')
 
 -- load lua configs (these can overwrite the old config)
 require('plugins')
+
+vim.cmd('source ~/.config/nvim/plugin/nord.vim')

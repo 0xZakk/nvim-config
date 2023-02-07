@@ -56,6 +56,9 @@ set spell
 set t_Co=256
 colorscheme nord
 
+" Make border line between windows visible
+let g:nord_borders = v:true
+
 " Folding
 set foldmethod=indent
 set foldlevel=1
