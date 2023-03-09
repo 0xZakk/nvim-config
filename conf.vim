@@ -3,37 +3,72 @@ filetype plugin on
 syntax on
 
 " Basic
-set encoding=utf-8                " Sets the default encoding
-set showcmd                       " Display incomplete commands.
-set cmdheight=2                   " Give more space for displaying messages.
-set hidden                        " Handle multiple buffers better.
-set wildmenu                      " Enhanced command line completion.
-set wildmode=list:longest         " Complete files like a shell.
-set scrolloff=5                   " Show 5 lines of context around the cursor.
-set title                         " Set the terminal's title
-set nobackup                      " Don't make a backup before overwriting a file.
-set nowritebackup                 " And again.
-set noswapfile                    " don't keep swap files
-set nonumber                      " No line numbering
-set relativenumber                " numbers are relative to current line.
-set showtabline=2                 " don't show the tab bar
-set splitright                    " Split to right by default
-set autochdir                     " automatically detect & change working dir
-set autoread                      " automatically reload file when it changes
-set updatetime=300                " make update time short and fast.
-set shortmess+=c                  " Don't pass messages to |ins-completion-menu|.
+" Sets the default encoding
+set encoding=utf-8
+" Display incomplete commands.
+set showcmd
+" Give more space for displaying messages.
+set cmdheight=2
+" Handle multiple buffers better.
+set hidden
+" Enhanced command line completion.
+set wildmenu
+" Complete files like a shell.
+set wildmode=list:longest
+" Show 5 lines of context around the cursor.
+set scrolloff=5
+" Set the terminal's title
+set title
+" Don't make a backup before overwriting a file.
+set nobackup
+" And again.
+set nowritebackup
+" don't keep swap files
+set noswapfile
+
+" No line numbering
+set nonumber
+
+" numbers are relative to current line.
+set relativenumber
+
+" don't show the tab bar
+set showtabline=2
+
+" Split to right by default
+set splitright
+
+" automatically detect & change working dir
+set autochdir
+
+" automatically reload file when it changes
+set autoread
+
+" make update time short and fast.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
 
 " disable both bell and flash on errors
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
 " Search
-set ignorecase                    " Case-insensitive searching.
-set smartcase                     " But case-sensitive if expression contains a capital letter.
-set incsearch                     " Highlight matches as you type.
-set hlsearch                      " Highlight matches.
-set showmatch                     " Show matching brackets
-set gdefault                      " search & replace globablly  by default
+" Case-insensitive searching.
+set ignorecase
+" But case-sensitive if expression contains a capital letter.
+set smartcase
+" Highlight matches as you type.
+set incsearch
+" Highlight matches.
+set hlsearch
+" Show matching brackets
+set showmatch
+" search & replace globablly  by default
+set gdefault
+
 
 " Text
 set list
