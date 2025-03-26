@@ -12,6 +12,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   { import = "plugins" }  -- auto-loads all files in lua/plugins/
 })
+require("config.keymaps")
+require("config.colors")
 
 -- load OG conf from vim file
 vim.cmd('source ~/.config/nvim/conf.vim')
