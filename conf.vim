@@ -97,6 +97,7 @@ let g:nord_borders = v:true
 " Folding
 set foldmethod=indent
 set foldlevel=1
+set foldopen-=block
 
 " FZF
 set rtp+=/opt/homebrew/opt/fzf

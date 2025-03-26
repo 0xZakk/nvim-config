@@ -1,16 +1,20 @@
--- Install Packer if it isn't already installed
-local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-if vim.fn.isdirectory(install_path) == 0 then
-    print 'downloading packer.nvim'
-    packer_bootstrap = vim.fn.system { 'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path }
-    vim.cmd [[packadd packer.nvim]]
+-- install Lazy if it isn't already installed
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git", "clone", "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    lazypath
+  })
 end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  { import = "plugins" }  -- auto-loads all files in lua/plugins/
+})
 
 -- load OG conf from vim file
 vim.cmd('source ~/.config/nvim/conf.vim')
 vim.cmd('source ~/.config/nvim/plugin/nord.vim')
-
--- load lua configs (these can overwrite the old config)
-require('plugins')
 
 vim.cmd('source ~/.config/nvim/plugin/nord.vim')

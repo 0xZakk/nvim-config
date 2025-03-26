@@ -222,12 +222,8 @@ packer.startup(function(use)
   use 'maxmellon/vim-jsx-pretty'
 
   -- Prettier
-  --use {
-  --'MunifTanjim/prettier.nvim', -- Prettier plugin for Neovim's built-in LSP client
-  --requires = { {
-  --'jose-elias-alvarez/null-ls.nvim'
-  --} }
-  --}
+  -- https://github.com/MunifTanjim/prettier.nvim
+  use 'MunifTanjim/prettier.nvim'
 
   -- Vim GraphQL
   -- https://github.com/jparise/vim-graphql
