@@ -1,3 +1,8 @@
+-- Disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+
 return {
   -- BASIC CONFIG
   { 'tpope/vim-sensible' },
@@ -6,7 +11,6 @@ return {
   { 'junegunn/fzf' },
   { 'junegunn/fzf.vim' },
   { 'airblade/vim-rooter' },
-  { 'scrooloose/nerdtree' },
   { 'tpope/vim-repeat' },
 
   -- ADVANCED CONFIG
@@ -110,5 +114,3 @@ return {
   { 'vimwiki/vimwiki' },
   { 'junegunn/goyo.vim' },
 }
-
-

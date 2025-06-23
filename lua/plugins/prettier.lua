@@ -25,5 +25,16 @@ return {
       semi = true,
       use_tabs = false,
     })
+
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      pattern = {
+        "*.js", "*.jsx", "*.ts", "*.tsx", "*.json",
+        "*.css", "*.scss", "*.html", "*.yaml", "*.md",
+        "*.graphql", "*.sol",
+      },
+      callback = function()
+        vim.cmd("Prettier")
+      end
+    })
   end,
 }
