@@ -47,7 +47,7 @@ return {
       capabilities = capabilities,
     }
 
-    nvim_lsp.tsserver.setup {
+    nvim_lsp.ts_ls.setup {
       on_attach = on_attach,
       filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
       cmd = { "typescript-language-server", "--stdio" },
@@ -95,11 +95,9 @@ return {
     })
 
     -- LSP keymaps (which-key)
-    wk.register({
-      g = {
-        D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
-        i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
-      },
+    wk.add({
+      { "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", desc = "Declaration" },
+      { "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", desc = "Implementation" },
     })
   end,
 }

@@ -24,7 +24,7 @@ return {
         "graphql",
         "html",
         "jsonls",
-        "tsserver",
+        "ts_ls",
         "remark_ls",
         "prismals",
         "jedi_language_server",
