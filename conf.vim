@@ -26,11 +26,12 @@ set nowritebackup
 " don't keep swap files
 set noswapfile
 
-" No line numbering
-set nonumber
-
-" numbers are relative to current line.
+" Line numbers - both for relative with absolute on current line
+set number
 set relativenumber
+
+" Always show sign column (padding on left for git signs, diagnostics, etc.)
+set signcolumn=yes
 
 " don't show the tab bar
 set showtabline=2
