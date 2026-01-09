@@ -25,7 +25,6 @@ return {
         "html",
         "jsonls",
         "ts_ls",
-        "remark_ls",
         "prismals",
         "jedi_language_server",
         "solc",
