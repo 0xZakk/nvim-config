@@ -55,12 +55,6 @@ cmd [[
   endfunction
 ]]
 
--- vim.g.NERDTreeChDirMode = 3
--- This broke. Fix it if you want to use NERDTree and remove the remapping
--- /lua/plugins/telescope.lua
--- map("n", "<leader>kb", ":NERDTreeToggle<CR>", opts)
--- map("n", "<leader>n", ":NERDTreeFocus<CR>", opts)
-
-
--- Show hidden files in NERDTree
--- vim.g.NERDTreeShowHidden = 1
+-- NERDTree
+vim.g.NERDTreeShowHidden = 1
+map("n", "<leader>kb", ":NERDTreeToggle<CR>", opts)

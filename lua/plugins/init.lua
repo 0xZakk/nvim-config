@@ -12,6 +12,7 @@ return {
   { 'junegunn/fzf.vim' },
   { 'airblade/vim-rooter' },
   { 'tpope/vim-repeat' },
+  { 'preservim/nerdtree' },
 
   -- ADVANCED CONFIG
   { 'lukas-reineke/indent-blankline.nvim' },
