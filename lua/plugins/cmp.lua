@@ -25,7 +25,7 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
-      mapping = cmp.mapping.preset.insert({
+      mapping = {
         -- Scroll down through suggestions
         ['<C-n>'] = cmp.mapping(function(fallback)
           if cmp.visible() then
@@ -57,7 +57,30 @@ return {
           behavior = cmp.ConfirmBehavior.Replace,
           select = true,
         }),
-      }),
+
+        -- Tab: Copilot -> cmp -> snippet -> fallback
+        ['<Tab>'] = cmp.mapping(function(fallback)
+          if vim.fn['copilot#GetDisplayedSuggestion']().text ~= '' then
+            vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](), 'n', true)
+          elseif cmp.visible() then
+            cmp.select_next_item()
+          elseif luasnip.expand_or_jumpable() then
+            luasnip.expand_or_jump()
+          else
+            fallback()
+          end
+        end, { 'i', 's' }),
+
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.select_prev_item()
+          elseif luasnip.jumpable(-1) then
+            luasnip.jump(-1)
+          else
+            fallback()
+          end
+        end, { 'i', 's' }),
+      },
 
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
