@@ -14,6 +14,18 @@ return {
     local builtin = require("telescope.builtin")
     local fb_actions = require("telescope").extensions.file_browser.actions
 
+    -- Custom ignore file: hide all dot-prefixed paths except .claude/.
+    -- Used by ripgrep (live_grep) via --ignore-file. fd cannot honor this
+    -- alongside --no-ignore, so find_files uses a two-step shell command below.
+    local ignore_file = vim.fn.stdpath("cache") .. "/telescope-ignore"
+    do
+      local f = io.open(ignore_file, "w")
+      if f then
+        f:write(".*\nnode_modules\n!.claude\n!.claude/**\n")
+        f:close()
+      end
+    end
+
     local function toggle_mode()
       local current_mode = vim.fn.mode()
       if current_mode == "n" then
@@ -25,9 +37,7 @@ return {
 
     telescope.setup({
       defaults = {
-        no_ignore = true,
-        hidden = true,
-        file_ignore_patterns = { "node_modules", ".git" },
+        file_ignore_patterns = { "node_modules", "%.git/" },
         mappings = {
           n = {
             ["q"] = actions.close,
@@ -44,6 +54,20 @@ return {
         layout_config = {
           prompt_position = "top",
         }
+      },
+      pickers = {
+        find_files = {
+          find_command = {
+            "sh", "-c",
+            "fd --type f --no-ignore --color=never --exclude=node_modules --exclude=.git; "
+              .. "[ -d .claude ] && fd --type f --no-ignore --hidden --color=never . .claude",
+          },
+        },
+        live_grep = {
+          additional_args = function()
+            return { "--hidden", "--no-ignore-vcs", "--ignore-file=" .. ignore_file }
+          end,
+        },
       },
       extensions = {
         file_browser = {
