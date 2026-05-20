@@ -27,7 +27,6 @@ return {
         "ts_ls",
         "prismals",
         "jedi_language_server",
-        "solc",
         "yamlls",
       },
     })
