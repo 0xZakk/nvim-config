@@ -10,6 +10,7 @@ require("config.lazy")
 require("config.keymaps")
 require("config.colors")
 require("config.templates")
+require("config.filetypes")
 
 -- load OG conf from vim file
 vim.cmd('source ~/.config/nvim/conf.vim')

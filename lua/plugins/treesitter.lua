@@ -10,7 +10,7 @@ return {
     require("nvim-treesitter").setup()
 
     local parsers = {
-      "tsx", "json", "yaml", "css", "html", "lua", "bash",
+      "tsx", "json", "jsonc", "yaml", "css", "html", "lua", "bash",
       "graphql", "markdown", "prisma", "javascript", "python",
       "scss", "solidity", "sql",
     }
