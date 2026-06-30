@@ -16,7 +16,6 @@ return {
 
   -- ADVANCED CONFIG
   { 'lukas-reineke/indent-blankline.nvim' },
-  { 'numToStr/Comment.nvim' },
   { 'tpope/vim-sleuth' },
   { 'windwp/nvim-autopairs' },
   { 'windwp/nvim-ts-autotag' },
